@@ -53,20 +53,20 @@ describe('GET /', function() {
       });
   });
 
-  describe('POST /event', function() {
-    it('adds an event', function(done) {
-      request(app)
-      .post('/event')
-      .send( { title: 'a test event', description: 'a really cool test' })
-      .set('Accept', 'application/json')
-      .expect(200)
-      .end((err, res) => {
-        if (err) {
-          return done(err);
-        }
-        chai.expect(JSON.parse(res.text).events.length).to.equal(3);
-        return done();
-      });
+//   describe('POST /event', function() {
+//     it('adds an event', function(done) {
+//       request(app)
+//       .post('/event')
+//       .send( { title: 'a test event', description: 'a really cool test' })
+//       .set('Accept', 'application/json')
+//       .expect(200)
+//       .end((err, res) => {
+//         if (err) {
+//           return done(err);
+//         }
+//         chai.expect(JSON.parse(res.text).events.length).to.equal(3);
+//         return done();
+//       });
 
-      });
-  });
+//       });
+//   });
